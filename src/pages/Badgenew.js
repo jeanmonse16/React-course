@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import "./styles/Badgenew.css";
 import logo from "../images/badge-header.svg";
 import Badge from "../components/Badge";
+import Badgeform from "../components/Badgeform";
 
 class Badgenew extends React.Component{
     render()
@@ -14,10 +15,13 @@ class Badgenew extends React.Component{
              <img className="img-fluid" src={logo} alt="conflogo"></img>
          </div>
          
-         <div clasName="container">
+         <div className="container">
            <div className="row">
-               <div className="col">
+               <div className="col-6">
                      <Badge firstname="Jeanpier" lastname="Monserrate" hashtag="platziconf" />
+               </div>
+               <div className="col-6">
+                     <Badgeform/>
                </div>
            </div>
          </div>
