@@ -15,7 +15,7 @@ class Badge extends React.Component{
        </div>
        
        <div className="Badge__section-info ">
-         <h4>Soy desarrollador frontend, pero también me sé manejar dentro del backend </h4>
+         <h5>  Soy desarrollador frontend, pero también me sé manejar dentro del backend </h5>
        </div>
        
        <div className="Badge__footer">

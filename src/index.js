@@ -12,10 +12,7 @@ import "./global.css";
 import Badgenew from "./pages/Badgenew";
 
 //const jsx = <h1>Hello, Platzi badges!</h1>;
-const element = React.createElement("div",{},
-React.createElement("h1",{}, "hola platzi"),
-React.createElement("p",{}, "soy janpi")
-)
+//const element = React.createElement("div",{},React.createElement("h1",{}, "hola platzi"),React.createElement("p",{}, "soy janpi"))
 
 const container = document.getElementById('app');
 
