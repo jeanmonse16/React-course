@@ -11,8 +11,7 @@ import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
 
-//import Badgenew from "./pages/Badgenew";
-import Badges from "./pages/Badges";
+import App from "./components/App";
 
 //const jsx = <h1>Hello, Platzi badges!</h1>;
 //const element = React.createElement("div",{},React.createElement("h1",{}, "hola platzi"),React.createElement("p",{}, "soy janpi"))
@@ -26,4 +25,4 @@ const container = document.getElementById('app');
 //)
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(<Badges />, container);
+ReactDOM.render(<App />, container);

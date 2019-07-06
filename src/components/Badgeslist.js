@@ -20,11 +20,13 @@ class Badgeslist extends React.Component
                             
                               <div className="BadgesListItem">
 
-                                  <img className="BadgesListItem__avatar" src={badge.avatarUrl} alt="avatar"></img>
-                                     <div>
+                                  <img 
+                                  className="BadgesListItem__avatar" src={badge.avatarUrl} alt="avatar">
+                                  </img>
+                                <div>
                                        <h4> {badge.firstName} {badge.lastName}</h4> 
                                        <p className="twitter__blue_font">
-                                          <img src={favicon}/>
+                                          <img src={favicon} alt="favicon" />
                                            @{badge.twitter}
                                        </p>
                                        <p> 
