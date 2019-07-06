@@ -9,7 +9,16 @@ import loguito from "../images/badge-header.svg";
 
 class Badges extends React.Component
 {
-    state= {
+
+    constructor(props){
+      super(props) 
+      this.state = {data: [],}
+      console.log("1. constructor")
+    }
+
+    componentDidMount(){
+      this.timeout = setTimeout(() => {
+      this.setState({
         data: [
             {
               id: '2de30c42-9deb-40fc-a41f-05e62b5939a7',
@@ -42,10 +51,34 @@ class Badges extends React.Component
                 'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
             },
           ]
+      })
+    }, 300);
+
+    console.log("3. DidMount")
+
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        console.log({
+            prevProps: prevProps,
+            prevState: prevState,
+          });
+      
+          console.log({
+            props: this.props,
+            state: this.state,
+          });
+        console.log("5. CDU")
+    }
+
+    componentWillUnmount(){
+        console.log("6. CWU")
+        clearTimeout(this.timeout)
     }
 
     render()
     {
+        console.log("2/4 render")
         return (
             <React.Fragment>
                 
