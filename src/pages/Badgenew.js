@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+
 import "./styles/Badgenew.css";
 import logo from "../images/badge-header.svg";
 import Badge from "../components/Badge";
@@ -35,8 +35,8 @@ class Badgenew extends React.Component{
     render()
     {
        return (
-        <div>
-            <Navbar/>
+        <React.Fragment>
+         
          <div className="BadgeNew__hero">
              <img className="img-fluid" src={logo} alt="conflogo"></img>
          </div>
@@ -52,7 +52,7 @@ class Badgenew extends React.Component{
            </div>
          </div>
 
-        </div>
+        </React.Fragment>
        )
     }
 }
