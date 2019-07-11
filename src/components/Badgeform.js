@@ -50,6 +50,9 @@ class Badgeform extends React.Component{
                         <input value={this.props.formValues.twitter} onChange={this.props.onChange} className="form-control" type="text" name="twitter" ></input>
                     </div>
                     <button onClick={this.props.onClick} className="btn btn-primary" type="button">Save</button>
+                    {this.props.error && (<p className="text-danger">
+                        {this.props.error.message}
+                    </p>) }
                 </form>
             </div>
         )

@@ -5,11 +5,12 @@ import logo from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import Badgeform from "../components/Badgeform";
 import api from "../api";
-
+import PageLoading from "../components/PageLoading";
 
 class Badgenew extends React.Component{
 
     state= { 
+        loading: false,
         form:{
                firstName:"",
                lastName:"",
@@ -38,6 +39,8 @@ class Badgenew extends React.Component{
         try{
             await api.badges.create(this.state.form)
             this.setState({loading: false})
+
+            this.props.history.push("/badges")
         }
         catch(error){
             this.setState({
@@ -48,6 +51,10 @@ class Badgenew extends React.Component{
 
     render()
     {
+       if(this.state.loading){
+           return <PageLoading />
+       }
+
        return (
         <React.Fragment>
          
@@ -68,7 +75,11 @@ class Badgenew extends React.Component{
                      />
                </div>
                <div className="col-6">
-                     <Badgeform onChange={this.handleChange} formValues={this.state.form} onClick={this.handleClick} />
+                     <Badgeform 
+                     onChange={this.handleChange} 
+                     formValues={this.state.form} 
+                     onClick={this.handleClick}
+                     error={this.state.error} />
                </div>
            </div>
          </div>
