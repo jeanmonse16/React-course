@@ -44,7 +44,9 @@ class Badgenew extends React.Component{
          <div className="container">
            <div className="row">
                <div className="col-6">
-                     <Badge firstname={this.state.form.firstName} lastname={this.state.form.LastName} hashtag="platziconf" twitter={this.state.form.twitter} />
+                     <Badge 
+                     firstname={this.state.form.firstName} lastname={this.state.form.LastName} hashtag="platziconf" twitter={this.state.form.twitter} jobPosition={this.state.form.jobPosition}
+                     />
                </div>
                <div className="col-6">
                      <Badgeform onChange={this.handleChange} formValues={this.state.form} onClick={this.handleClick} />
