@@ -23,7 +23,7 @@ class Badgeform extends React.Component{
         return(
 
             <div>
-                <h1 className="">New Attendants</h1>
+                
                 <form>
                     <div className="form-group">
                         <label> First Name</label>

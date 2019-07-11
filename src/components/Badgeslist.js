@@ -30,7 +30,7 @@ class Badgeslist extends React.Component
                     (badge) => {
                         return (
                         <li  key={badge.id}>
-                            
+                            <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}/edit`} >
                               <div className="BadgesListItem">
 
                                   <Gravatar 
@@ -48,7 +48,7 @@ class Badgeslist extends React.Component
                                 </div>
 
                               </div>
-                            
+                            </Link>
                             
                         </li>
                              )
