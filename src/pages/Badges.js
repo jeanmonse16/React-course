@@ -7,6 +7,9 @@ import api from "../api";
 import "./styles/Badges.css";
 
 import Badgeslist from "../components/Badgeslist";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
+
 import loguito from "../images/badge-header.svg";
 
 class Badges extends React.Component
@@ -46,13 +49,11 @@ class Badges extends React.Component
     render()
     {
         if(this.state.loading){
-            return "loading, wait til we charge the page"
+            return <PageLoading />
         }
 
         if(this.state.error){
-            return <h3>
-                    error: {this.state.error.message}
-                   </h3>
+            return <PageError error={this.state.error} />
         }
 
 
