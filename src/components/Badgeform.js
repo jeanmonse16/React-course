@@ -32,7 +32,7 @@ class Badgeform extends React.Component{
                     
                     <div className="form-group">
                         <label> Last Name</label>
-                        <input value={this.props.formValues.LastName} onChange={this.props.onChange} className="form-control" type="text" name="LastName" ></input>
+                        <input value={this.props.formValues.lastName} onChange={this.props.onChange} className="form-control" type="text" name="lastName" ></input>
                     </div>
 
                     <div className="form-group">
@@ -42,7 +42,7 @@ class Badgeform extends React.Component{
 
                     <div className="form-group">
                         <label> job position</label>
-                        <input value={this.props.formValues.jobPosition} onChange={this.props.onChange} className="form-control" type="text" name="jobPosition" ></input>
+                        <input value={this.props.formValues.jobTitle} onChange={this.props.onChange} className="form-control" type="text" name="jobTitle" ></input>
                     </div>
 
                     <div className="form-group">

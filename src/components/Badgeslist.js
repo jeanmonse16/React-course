@@ -5,6 +5,7 @@ import {Link} from "react-router-dom"
 import "./styles/BadgesList.css";
 
 import favicon from "../images/favicon.png";
+import Gravatar from"./Gravatar";
 
 
 class Badgeslist extends React.Component
@@ -32,9 +33,9 @@ class Badgeslist extends React.Component
                             
                               <div className="BadgesListItem">
 
-                                  <img 
-                                  className="BadgesListItem__avatar" src={badge.avatarUrl} alt="avatar">
-                                  </img>
+                                  <Gravatar 
+                                  className="BadgesListItem__avatar" email={badge.email} >
+                                  </Gravatar>
                                 <div>
                                        <h4> {badge.firstName} {badge.lastName}</h4> 
                                        <p className="twitter__blue_font">

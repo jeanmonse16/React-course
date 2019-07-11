@@ -1,18 +1,20 @@
 import React from "react";
 
 import "./styles/Badgenew.css";
-import logo from "../images/badge-header.svg";
+import logo from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import Badgeform from "../components/Badgeform";
+import api from "../api";
+
 
 class Badgenew extends React.Component{
 
     state= { 
         form:{
                firstName:"",
-               LastName:"",
+               lastName:"",
                email:"",
-               jobPosition:"",
+               jobTitle:"",
                twitter:"",
              } 
     };
@@ -27,9 +29,21 @@ class Badgenew extends React.Component{
         })
     }
 
-    handleClick = e => {
-        console.log(this.state.form)
+    handleClick = async e => {
         console.log("boton presionado")
+        this.setState({
+            loading: true, error: null
+        })
+
+        try{
+            await api.badges.create(this.state.form)
+            this.setState({loading: false})
+        }
+        catch(error){
+            this.setState({
+                loading:false, error: error
+            })
+        }
     }
 
     render()
@@ -38,14 +52,19 @@ class Badgenew extends React.Component{
         <React.Fragment>
          
          <div className="BadgeNew__hero">
-             <img className="img-fluid" src={logo} alt="conflogo"></img>
+             <img className="BadgeNew__hero-image img-fluid" src={logo} alt="conflogo"></img>
          </div>
          
          <div className="container">
            <div className="row">
                <div className="col-6">
                      <Badge 
-                     firstname={this.state.form.firstName} lastname={this.state.form.LastName} hashtag="platziconf" twitter={this.state.form.twitter} jobPosition={this.state.form.jobPosition}
+                     firstname={this.state.form.firstName || "FirstName"}  
+                     lastName={this.state.form.lastName || "LastName"} 
+                     hashtag="platziconf" 
+                     twitter={this.state.form.twitter ||'twitter' } 
+                     jobTitle={this.state.form.jobTitle || "JobPosition"}
+                     email={this.state.form.email || 'EMAIL'}
                      />
                </div>
                <div className="col-6">

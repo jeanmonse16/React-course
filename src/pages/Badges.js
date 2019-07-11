@@ -10,6 +10,7 @@ import Badgeslist from "../components/Badgeslist";
 import PageLoading from "../components/PageLoading";
 import PageError from "../components/PageError";
 
+
 import loguito from "../images/badge-header.svg";
 
 class Badges extends React.Component

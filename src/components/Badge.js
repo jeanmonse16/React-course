@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Badge.css";
 import Conflogo from "../images/descarga.svg";
+import Gravatar from "./Gravatar";
 
 class Badge extends React.Component{
   render() {
@@ -10,12 +11,12 @@ class Badge extends React.Component{
        </div>
 
        <div className="Badge__section-name">
-           <img className="Badge__avatar" src="https://www.gravatar.com/avatar?d=identicon" alt="avatar"></img>
-           <h1>{this.props.firstname} <br></br>{this.props.lastname}</h1>
+           <Gravatar className="Badge__avatar" email={this.props.email}  />
+           <h1>{this.props.firstname} <br></br>{this.props.lastName}</h1>
        </div>
        
        <div className="Badge__section-info ">
-         <h5>  {this.props.jobPosition} </h5>
+         <h5>  {this.props.jobTitle} </h5>
          <p> @{this.props.twitter} </p> 
        </div>
        
