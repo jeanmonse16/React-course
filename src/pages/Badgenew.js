@@ -68,7 +68,6 @@ class Badgenew extends React.Component{
                      <Badge 
                      firstname={this.state.form.firstName || "FirstName"}  
                      lastName={this.state.form.lastName || "LastName"} 
-                     hashtag="platziconf" 
                      twitter={this.state.form.twitter ||'twitter' } 
                      jobTitle={this.state.form.jobTitle || "JobPosition"}
                      email={this.state.form.email || 'EMAIL'}

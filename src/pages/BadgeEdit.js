@@ -1,5 +1,7 @@
 import React from "react";
 
+import {Link} from "react-router-dom"
+
 import "./styles/BadgeEdit.css";
 import logo from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
@@ -29,6 +31,25 @@ class BadgeEdit extends React.Component{
             [e.target.name]: e.target.value
             },
         })
+    }
+
+    //handleDelete is not a keyword :)
+    handleDelete = async e => {
+        console.log("badge borrado")
+        this.setState({
+            loading: true, error: null
+        })
+
+        try{
+            await api.badges.remove(this.props.match.params.badgeId )
+            this.setState({loading: false})
+            this.props.history.push("/badges")
+        }
+        catch(error){
+            this.setState({
+                loading:false, error: error
+            })
+        }
     }
 
     handleClick = async e => {
@@ -100,12 +121,14 @@ class BadgeEdit extends React.Component{
                      />
                </div>
                <div className="col-6">
-                    <h1 className="">Edit Attendants</h1>
-                     <Badgeform 
-                     onChange={this.handleChange} 
-                     formValues={this.state.form} 
-                     onClick={this.handleClick}
-                     error={this.state.error} />
+                    
+                      <h1 className="">Edit Attendants</h1>
+                      <Badgeform 
+                      onChange={this.handleChange} 
+                      formValues={this.state.form} 
+                      onClick={this.handleClick}
+                      error={this.state.error} /> <br/>
+                      <Link className="btn btn-primary" onClick={this.handleDelete}> Delete </Link>
                </div>
            </div>
          </div>

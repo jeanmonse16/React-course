@@ -12,7 +12,7 @@ class Badge extends React.Component{
 
        <div className="Badge__section-name">
            <Gravatar className="Badge__avatar" email={this.props.email}  />
-           <h1>{this.props.firstname} <br></br>{this.props.lastName}</h1>
+           <h1>{this.props.firstName} <br></br>{this.props.lastName}</h1>
        </div>
        
        <div className="Badge__section-info ">
@@ -21,7 +21,7 @@ class Badge extends React.Component{
        </div>
        
        <div className="Badge__footer">
-          #{this.props.hashtag}
+          #platziconf
        </div>
        
        </div>
