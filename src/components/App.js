@@ -8,7 +8,7 @@ import Layout from "./Layout";
 import Notfound  from "../pages/Notfound";
 import Home from "../pages/Home";
 import BadgeEdit from "../pages/BadgeEdit";
-import BadgeDetails from "../pages/BadgeDetails"
+import BadgeDetails from "../pages/BadgeDetailsContainer"
 
 function App (){
    return (
