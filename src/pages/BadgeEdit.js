@@ -128,7 +128,7 @@ class BadgeEdit extends React.Component{
                       formValues={this.state.form} 
                       onClick={this.handleClick}
                       error={this.state.error} /> <br/>
-                      <Link className="btn btn-primary" onClick={this.handleDelete}> Delete </Link>
+                     
                </div>
            </div>
          </div>

@@ -6,6 +6,7 @@ import "./styles/BadgeDetails.css";
 import platziconf from "../images/platziconf-logo.svg";
 
 import Badge from "../components/Badge"
+import DeleteBadgeModal from "../components/DeleteBadgeModal"
 
 function BadgeDetails (props){
 
@@ -50,7 +51,12 @@ function BadgeDetails (props){
                       <Link to={`/badges/${badge.id}/edit`} className="btn btn-primary mb-4">Edit</Link>
                       </div>
                       <div>
-                      <button className="btn btn-danger">Delete</button>
+                      <button onClick={props.onOpenModal} className="btn btn-danger">Delete</button>
+                      <DeleteBadgeModal
+                        isOpen={props.isOpen} 
+                        onClose={props.onCloseModal} 
+                        deleteBadge={props.onDeleteBadge}
+                       />
                       </div>
                    </div>
                 </div>
