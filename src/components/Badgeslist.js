@@ -7,14 +7,39 @@ import "./styles/BadgesList.css";
 import favicon from "../images/favicon.png";
 import Gravatar from"./Gravatar";
 
+function useSearchBadges(badges){
+      const [ query, setQuery] = React.useState("")
 
-class Badgeslist extends React.Component
+      const [filteredBadges, setfilteredBadges] = React.useState(badges)
+
+      React.useMemo( () => {
+        const result = badges.filter(badge => {
+          return ` ${badge.firstName} ${badge.lastName}`.toLowerCase().includes(query.toLowerCase())
+        })
+
+        return setfilteredBadges(result)
+        }, [badges, query]);
+
+        return {query, setQuery, filteredBadges}
+}
+
+function Badgeslist (props)
 {
-    render()
-    {  
-       if(this.props.badges.length === 0){
+      const badges = props.badges
+      const {query, setQuery, filteredBadges} = useSearchBadges(badges)
+
+       if(filteredBadges.length === 0){
            return (
                <div>
+                   <div className="form-group">
+                     <label><h3>Filter Badges</h3></label>
+                     <input type="text" className="form-control" 
+                           value={query}
+                           onChange={ e => {
+                           setQuery(e.target.value)
+                            }}
+                     />
+                  </div>
                    <h3>
                        No badges were found
                    </h3>
@@ -25,8 +50,17 @@ class Badgeslist extends React.Component
 
        return (
         <div className="BadgesList">
+          <div className="form-group">
+             <label><h3>Filter Badges</h3></label>
+             <input type="text" className="form-control" 
+             value={query}
+             onChange={ e => {
+                 setQuery(e.target.value)
+             }}
+             />
+          </div>
           <ul className="list-unstyled">
-                {this.props.badges.map(
+                {filteredBadges.map(
                     (badge) => {
                         return (
                         <li  key={badge.id}>
@@ -59,7 +93,7 @@ class Badgeslist extends React.Component
         </div>   
         
        )
-    }
+    
 }
 
 export  default Badgeslist;
