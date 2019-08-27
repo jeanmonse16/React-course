@@ -1,0 +1,22 @@
+{
+  "main.css": "/CowList/static/css/main.5da2279c.chunk.css",
+  "main.js": "/CowList/static/js/main.5358499a.chunk.js",
+  "main.js.map": "/CowList/static/js/main.5358499a.chunk.js.map",
+  "runtime~main.js": "/CowList/static/js/runtime~main.94954d4b.js",
+  "runtime~main.js.map": "/CowList/static/js/runtime~main.94954d4b.js.map",
+  "static/css/2.b34bf7a3.chunk.css": "/CowList/static/css/2.b34bf7a3.chunk.css",
+  "static/js/2.7ab583dd.chunk.js": "/CowList/static/js/2.7ab583dd.chunk.js",
+  "static/js/2.7ab583dd.chunk.js.map": "/CowList/static/js/2.7ab583dd.chunk.js.map",
+  "index.html": "/CowList/index.html",
+  "precache-manifest.a3faa373f7b2786e331d223c867f3917.js": "/CowList/precache-manifest.a3faa373f7b2786e331d223c867f3917.js",
+  "service-worker.js": "/CowList/service-worker.js",
+  "static/css/2.b34bf7a3.chunk.css.map": "/CowList/static/css/2.b34bf7a3.chunk.css.map",
+  "static/css/main.5da2279c.chunk.css.map": "/CowList/static/css/main.5da2279c.chunk.css.map",
+  "static/media/badge-header.svg": "/CowList/static/media/badge-header.ed7c58ea.svg",
+  "static/media/cowlist-logo.svg": "/CowList/static/media/cowlist-logo.18a3471d.svg",
+  "static/media/descarga.svg": "/CowList/static/media/descarga.ed7c58ea.svg",
+  "static/media/logovaca.svg": "/CowList/static/media/logovaca.ecb75337.svg",
+  "static/media/platziconf-logo.svg": "/CowList/static/media/platziconf-logo.a1880fbf.svg",
+  "static/media/BadgeDetails.css": "/CowList/static/media/stars.0abcdfcd.svg",
+  "static/media/vacagrande.svg": "/CowList/static/media/vacagrande.258ee7f1.svg"
+}
