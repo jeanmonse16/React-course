@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/CowList/static/media/badge-header.ed7c58ea.svg"
   },
   {
-    "revision": "5358499a41d0be6a121a",
+    "revision": "96751257e8cd9db155b6",
     "url": "/CowList/static/css/main.5da2279c.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/CowList/static/media/platziconf-logo.a1880fbf.svg"
   },
   {
-    "revision": "5358499a41d0be6a121a",
-    "url": "/CowList/static/js/main.5358499a.chunk.js"
+    "revision": "96751257e8cd9db155b6",
+    "url": "/CowList/static/js/main.96751257.chunk.js"
   },
   {
     "revision": "ed7c58eafe17eff3b2557c0369b20264",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/CowList/static/css/2.b34bf7a3.chunk.css"
   },
   {
-    "revision": "44c51c29fb98e1996fafba2152c1cce5",
+    "revision": "eb7d6349e3d403fbbbe46bdee0c875d6",
     "url": "/CowList/index.html"
   }
 ];
